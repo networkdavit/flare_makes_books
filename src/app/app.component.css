@@ -15,7 +15,11 @@ a {
   font-size:12px;
 }
 
-.background{
+.body_background{
     background-image: url("../assets/images/dnd_dice.jpg");
+}
+
+.fire_background{
+    background-image: url("../assets/images/flames.gif");
 }
 
