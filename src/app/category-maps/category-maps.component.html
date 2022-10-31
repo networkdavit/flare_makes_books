@@ -1,0 +1,26 @@
+<div class="fire_background">
+    <app-navbar></app-navbar>
+  </div>
+  <div *ngIf="loading" class="loader"></div>
+  <div *ngIf="!loading">
+    <div class="body_background">
+        <h3 class="center_text">Maps</h3>
+        <div class="row row-cols-1 row-cols-md-2 col d-flex justify-content-center background">
+          
+            <div *ngFor="let map of map_list; index as i">
+                <div class="col mb-4 zoom">
+                    <div class="card card_background">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">{{map.map_title}}</h5>
+                            <p class="card-text">{{map.map_description}}</p>
+                        </div>
+                    <button type="button" class="btn btn-info">check it out</button>
+                </div>
+            </div>
+        </div>
+      </div>
+      
+      <div>
+  </div>
+<app-footer></app-footer>

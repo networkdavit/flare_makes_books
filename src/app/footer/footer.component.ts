@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class FooterComponent implements OnInit {
 
   copyright_text: string = "";
-  current_year: any = "";
+  current_year: number = 2022;
 
   constructor() { }
 

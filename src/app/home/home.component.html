@@ -1,14 +1,40 @@
-<h1 class="center_text">Featured books</h1>
-<div *ngFor="let row of rows" class="row row-cols-1 row-cols-md-2 col d-flex justify-content-center background">
-    <div *ngFor="let card of cards; index as i">
-        <div class="col mb-4 zoom">
-            <div class="card">
-              <img src="..." class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              </div>
+<div>
+    <div *ngIf="loading" class="loader"></div>
+    <div *ngIf="!loading">
+    <div class="body_background">
+
+        <h3 class="center_text">Featured books</h3>
+        <div class="row row-cols-1 row-cols-md-2 col d-flex justify-content-center background">
+            <div *ngFor="let book of featured_books; index as i">
+                <div class="col mb-4 zoom">
+                    <div class="card card_background">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">{{book.book_title}}</h5>
+                            <p class="card-text">{{book.book_description}}</p>
+                        </div>
+                    <button type="button" class="btn btn-info">check it out</button>
+                </div>
             </div>
-          </div>
+        </div>
     </div>
-  </div>
+    
+    <div>
+        <h3 class="center_text">Featured Maps</h3>
+        <div class="row row-cols-1 row-cols-md-2 col d-flex justify-content-center background">
+            <div *ngFor="let map of featured_maps; index as i">
+                <div class="col mb-4 zoom">
+                    <div class="card card_background">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">{{map.map_title}}</h5>
+                            <p class="card-text">{{map.map_description}}</p>
+                        </div>
+                    <button type="button" class="btn btn-info">check it out</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+<app-footer></app-footer>
+
